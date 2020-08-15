@@ -5,7 +5,7 @@ class User(models.Model):
 	real_name = models.CharField(max_length=60)
 	tz = models.CharField(max_length=60)
 	def __str__(self):
-		return self
+		return self.real_name
 
 class ActivityPeriod(models.Model):
 	user = models.ForeignKey(User, related_name='activity_periods',on_delete=models.DO_NOTHING)
